@@ -3,8 +3,8 @@
 ## Introduction
  This project is an Javascript frontend consuming a Express backend 
 
-See it deployed here: https://enigmatic-beach-47018.herokuapp.com/ <br>
-Checkout the frontend here: https://github.com/mnhollandplum/calorie-tracker-fe
+See it deployed here: https://mnhollandplum.github.io/calorie-counter-fe/ <br>
+Checkout the backend here: https://github.com/tmaria17/calorie-counter-be
 ## How to Use
 
 1. Clone this starter kit repository and rename the repository to anything you'd like in one command:
