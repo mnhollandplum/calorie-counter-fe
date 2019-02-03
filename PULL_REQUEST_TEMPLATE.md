@@ -1,9 +1,26 @@
-#### Pivotal URL:
+- [] Wrote Tests
+- [] Implemented
+- [] Reviewed
 
-#### What does this PR do?
+# Necessary checkmarks:
+- [] All Tests are Passing
+- [] The code will run locally
 
-#### Where should the reviewer start?
+## Type of change
+- [] New feature
+- [] Bug Fix
 
-#### Any additional context you want to provide?
+# Implements/Fixes:
+* description
+* closes
 
-#### Screenshots (if appropriate)
+# Check the correct boxes
+- [] This broke nothing
+- [] This broke some stuff
+- [] This broke everything
+
+# Testing Changes
+- [] No Tests have been changed
+- [] Some Tests have been changed
+
+# Please include a link to a gif of how you feel about this branch:
