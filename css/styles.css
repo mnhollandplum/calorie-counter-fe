@@ -3,10 +3,10 @@
   width: 1%;
 }
 
-.hidden {
+.hidden-div {
   visibility: hidden;
 }
 
-.vis {
+.vis-div {
    visibility: visible;
 }
