@@ -1,0 +1,12 @@
+.table-fit {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.hidden-div {
+  visibility: hidden;
+}
+
+.vis-div {
+   visibility: visible;
+}
