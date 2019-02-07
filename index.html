@@ -163,8 +163,10 @@
     <div class="col-xs-6">
     <div class="container">
       <h2>Foods</h2>
-      <span class="text-right"><input type="text" placeholder="Search foods" name="search">
-      <button type="submit"><i class="fa fa-search"></i></button></span>
+      <h5>Create New Food</h5>
+      <span class="text-right"><input type="text" placeholder="Banana" id="food-name">
+      <span class="text-right"><input type="text" placeholder="100" id="food-cal">
+      <button id="create-food" onclick= "createFood">Create</button></td>
         <table class="table table-striped table-fit" id="foods-table" >
           <thead>
             <tr>
@@ -176,7 +178,6 @@
             </thead>
             <tbody>
               <tr>
-
               </tr>
             </tr>
           </tbody>
