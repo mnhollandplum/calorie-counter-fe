@@ -63,7 +63,6 @@
 	    url: 'https://enigmatic-beach-47018.herokuapp.com/api/v1/meals/1/foods',
 	    success: function success(result) {
 	      var breakfastData = result;
-	      console.log(breakfastData);
 	      displayBreakfast(breakfastData);
 	    }
 	  });
@@ -96,6 +95,7 @@
 	    type: 'POST'
 	  });
 	  location.reload();
+	  displayTotals();
 	}
 
 	function addLunch(food) {
@@ -103,6 +103,7 @@
 	    type: 'POST'
 	  });
 	  location.reload();
+	  displayTotals();
 	}
 
 	function addDinner(food) {
@@ -110,6 +111,7 @@
 	    type: 'POST'
 	  });
 	  location.reload();
+	  displayTotals();
 	}
 
 	function displayFood(foodData) {
@@ -120,7 +122,7 @@
 
 	function displayBreakfast(breakfastData) {
 	  breakfastData.foods.forEach(function (food, index) {
-	    $('#breakfast-table tbody').append('<tr>\n      <td>' + food.name + '</td>\n      <td>' + food.calories + ' </td>\n    </tr>');
+	    $('#breakfast-table tbody').append('<tr>\n      <td>' + food.name + '</td>\n      <td>' + food.calories + ' </td>\n      <td><button onclick = "deleteBreakfastItem(' + food.id + ')">Delete</button> </td>\n    </tr>');
 	  });
 	  $('#breakfast-total-cals').append(' ' + addMealTotal(breakfastData));
 	};
@@ -134,10 +136,10 @@
 
 	function displayDinner(dinnerData) {
 	  dinnerData.foods.forEach(function (food, index) {
-	    console.log(food);
 	    $('#dinner-table tbody').append('<tr>\n      <td>' + food.name + '</td>\n      <td>' + food.calories + ' </td>\n    </tr>');
 	  });
 	  $('#dinner-total-cals').append('' + addMealTotal(dinnerData));
+	  displayTotals();
 	};
 
 	function addMealTotal(mealInfo) {
@@ -148,6 +150,23 @@
 	  return calNums.reduce(function (x, y) {
 	    return x + y;
 	  });
+	}
+
+	function displayTotals() {
+	  br_cal = $('tfoot td#breakfast-total-cals').text();
+	  ln_cal = $('tfoot td#lunch-total-cals').text();
+	  dn_cal = $('tfoot td#dinner-total-cals').text();
+	  total_cal = +br_cal + +ln_cal + +dn_cal;
+	  goal_cal = 2000;
+	  $('#totals-table tbody').append('<tr>\n    <td>' + goal_cal + '</td>\n    <td>' + total_cal + ' </td>\n    <td>' + (goal_cal - total_cal) + ' </td>\n  </tr>');
+	}
+
+	function deleteBreakfastItem(food) {
+	  $.ajax('https://enigmatic-beach-47018.herokuapp.com/api/v1/meals/' + 1 + '/foods/' + food, {
+	    type: 'DELETE'
+	  });
+	  location.reload();
+	  displayTotals();
 	}
 
 /***/ })
