@@ -31,7 +31,7 @@ To contribute to this project please fork and submit a pull request.
 
 ## Screenshots 
 
- ![screenshot of app](https://raw.githubusercontent.com/mnhollandplum/calorie-counter-fe/blob/master/cal_tracker_food_index.png)
+ ![screenshot of app](https://raw.githubusercontent.com/mnhollandplum/calorie-counter-fe/cal_tracker_food_index.png)
 
 
 
