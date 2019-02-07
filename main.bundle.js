@@ -122,13 +122,14 @@
 	  breakfastData.foods.forEach(function (food, index) {
 	    $('#breakfast-table tbody').append('<tr>\n      <td>' + food.name + '</td>\n      <td>' + food.calories + ' </td>\n    </tr>');
 	  });
-	  $('#breakfast-total-cals').append('' + addMealData(breakfastData));
+	  $('#breakfast-total-cals').append(' ' + addMealTotal(breakfastData));
 	};
 
 	function displayLunch(lunchData) {
 	  lunchData.foods.forEach(function (food, index) {
 	    $('#lunch-table tbody').append('<tr>\n      <td>' + food.name + '</td>\n      <td>' + food.calories + ' </td>\n    </tr>');
 	  });
+	  $('#lunch-total-cals').append('' + addMealTotal(lunchData));
 	};
 
 	function displayDinner(dinnerData) {
@@ -136,9 +137,10 @@
 	    console.log(food);
 	    $('#dinner-table tbody').append('<tr>\n      <td>' + food.name + '</td>\n      <td>' + food.calories + ' </td>\n    </tr>');
 	  });
+	  $('#dinner-total-cals').append('' + addMealTotal(dinnerData));
 	};
 
-	function addMealData(mealInfo) {
+	function addMealTotal(mealInfo) {
 	  var calNums = [];
 	  mealInfo.foods.forEach(function (food, index) {
 	    calNums.push(food.calories);
